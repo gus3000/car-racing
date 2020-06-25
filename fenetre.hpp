@@ -7,9 +7,11 @@
 
 
 #include <SFML/Graphics.hpp>
+#include "car.hpp"
 
 class Fenetre : public sf::RenderWindow {
 protected:
+    Car car;
 
 public:
     Fenetre();

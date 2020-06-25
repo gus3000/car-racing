@@ -9,8 +9,16 @@ Fenetre::Fenetre() : sf::RenderWindow(sf::VideoMode(1600, 900), "This is car rac
 }
 
 void Fenetre::run() {
-    while(isOpen())
-    {
+    while (isOpen()) {
+        sf::Event event{};
+        while (pollEvent(event)) {
+            if (event.type == sf::Event::Closed)
+                close();
+            //TODO gérer les évènements clavier ici
 
+        }
+
+        draw(car);
+        display();
     }
 }
